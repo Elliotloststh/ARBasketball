@@ -11,6 +11,7 @@ class Frame {
     weak var previousFrame: Frame?
     
     let number: Int
+    let maxNumber: Int = 10
     
     private (set) var rolls = [Roll]()
     private (set) var score: Int?
@@ -29,10 +30,10 @@ class Frame {
     }
     
     var pinsLeft: Int {
-        guard let lastRoll = rolls.last else { return 10 }
+        guard let lastRoll = rolls.last else { return maxNumber }
         switch lastRoll.type {
         case .open(let x):
-            return 10 - x
+            return maxNumber - x
         default:
             return 0
         }
@@ -62,9 +63,9 @@ class Frame {
         // ⚠️ ATENÇÃO ⚠️ //
         // Aos 45'do segundo tempo, daqui pra baixo é só xunxo... 😬
         switch (ballIndex, pins, previousRoll?.type) {
-        case (0, 10, _):
+        case (0, maxNumber, _):
             rollStrike()
-        case (1, let x, .open(let y)?) where x + y == 10:
+        case (1, let x, .open(let y)?) where x + y == maxNumber:
             rollSpare(pins: x)
         default:
             rollOpen(pins: pins)
@@ -83,7 +84,7 @@ class Frame {
     }
     
     private func rollStrike() {
-        rolls.append(Roll(type: .strike, pins: 10, frame: self))
+        rolls.append(Roll(type: .strike, pins: maxNumber, frame: self))
     }
     
     private func rollSpare(pins: Int) {

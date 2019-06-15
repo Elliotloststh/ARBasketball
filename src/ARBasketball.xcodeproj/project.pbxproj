@@ -17,7 +17,6 @@
 		568E3C29204C277700E6C906 /* PinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568E3C28204C277700E6C906 /* PinSet.swift */; };
 		569032C720498B7900867939 /* PlayerSelectionStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032C620498B7900867939 /* PlayerSelectionStateController.swift */; };
 		569032C920498BB400867939 /* PinsPositioningStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032C820498BB400867939 /* PinsPositioningStateController.swift */; };
-		569032CB20498BD500867939 /* HighscoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032CA20498BD500867939 /* HighscoresViewController.swift */; };
 		569032CD20498C1600867939 /* BallThrowingStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032CC20498C1600867939 /* BallThrowingStateController.swift */; };
 		569032D120498CAA00867939 /* ScoreboardStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032D020498CAA00867939 /* ScoreboardStateController.swift */; };
 		569032D42049A27400867939 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032D32049A27400867939 /* PlayerTableViewCell.swift */; };
@@ -30,7 +29,6 @@
 		569A38B2204CDD2900B2EA36 /* FrameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569A38B1204CDD2900B2EA36 /* FrameView.xib */; };
 		569A38B5204CE54500B2EA36 /* LastFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A38B3204CE54500B2EA36 /* LastFrameView.swift */; };
 		569A38B6204CE54500B2EA36 /* LastFrameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569A38B4204CE54500B2EA36 /* LastFrameView.xib */; };
-		56B761CF2049E1DB0003A02B /* HighscoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B761CE2049E1DB0003A02B /* HighscoreTableViewCell.swift */; };
 		56B761D32049E9850003A02B /* Scoreboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B761D22049E9850003A02B /* Scoreboard.swift */; };
 		56BF1D792047822E006A46E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF1D782047822E006A46E0 /* AppDelegate.swift */; };
 		56BF1D7B2047822E006A46E0 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 56BF1D7A2047822E006A46E0 /* art.scnassets */; };
@@ -62,7 +60,6 @@
 		568E3C28204C277700E6C906 /* PinSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinSet.swift; sourceTree = "<group>"; };
 		569032C620498B7900867939 /* PlayerSelectionStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionStateController.swift; sourceTree = "<group>"; };
 		569032C820498BB400867939 /* PinsPositioningStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinsPositioningStateController.swift; sourceTree = "<group>"; };
-		569032CA20498BD500867939 /* HighscoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoresViewController.swift; sourceTree = "<group>"; };
 		569032CC20498C1600867939 /* BallThrowingStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallThrowingStateController.swift; sourceTree = "<group>"; };
 		569032D020498CAA00867939 /* ScoreboardStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardStateController.swift; sourceTree = "<group>"; };
 		569032D32049A27400867939 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,7 +72,6 @@
 		569A38B1204CDD2900B2EA36 /* FrameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FrameView.xib; sourceTree = "<group>"; };
 		569A38B3204CE54500B2EA36 /* LastFrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastFrameView.swift; sourceTree = "<group>"; };
 		569A38B4204CE54500B2EA36 /* LastFrameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LastFrameView.xib; sourceTree = "<group>"; };
-		56B761CE2049E1DB0003A02B /* HighscoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoreTableViewCell.swift; sourceTree = "<group>"; };
 		56B761D22049E9850003A02B /* Scoreboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scoreboard.swift; sourceTree = "<group>"; };
 		56BF1D752047822E006A46E0 /* ARBasketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBasketball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BF1D782047822E006A46E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				569032D32049A27400867939 /* PlayerTableViewCell.swift */,
-				56B761CE2049E1DB0003A02B /* HighscoreTableViewCell.swift */,
 				569A38AC204CDA2600B2EA36 /* ScoreboardTableViewCell.swift */,
 			);
 			path = Cells;
@@ -214,7 +209,6 @@
 			children = (
 				56BF1D9C2048AAE1006A46E0 /* BaseViewController.swift */,
 				56BF1D7C2047822E006A46E0 /* ARViewController.swift */,
-				569032CA20498BD500867939 /* HighscoresViewController.swift */,
 				56BF1D98204879D0006A46E0 /* TitleViewController.swift */,
 				56195583204BFFDE00D004CA /* GameStates */,
 			);
@@ -298,7 +292,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Charles Ferreira";
 				TargetAttributes = {
 					56BF1D742047822E006A46E0 = {
@@ -352,7 +346,6 @@
 			files = (
 				569A38A9204C82A600B2EA36 /* Frame.swift in Sources */,
 				568E3C27204C22A600E6C906 /* Floor.swift in Sources */,
-				56B761CF2049E1DB0003A02B /* HighscoreTableViewCell.swift in Sources */,
 				56BF1D99204879D0006A46E0 /* TitleViewController.swift in Sources */,
 				569032C720498B7900867939 /* PlayerSelectionStateController.swift in Sources */,
 				56BF1D9020478459006A46E0 /* Ball.swift in Sources */,
@@ -373,7 +366,6 @@
 				56BF1D9D2048AAE1006A46E0 /* BaseViewController.swift in Sources */,
 				56BF1DAE2048D253006A46E0 /* GameState.swift in Sources */,
 				56842FC4204D39FE00E3778C /* CustomView.swift in Sources */,
-				569032CB20498BD500867939 /* HighscoresViewController.swift in Sources */,
 				56B761D32049E9850003A02B /* Scoreboard.swift in Sources */,
 				569032D92049C24600867939 /* Constants.swift in Sources */,
 				56195585204BFFF900D004CA /* GameStateController.swift in Sources */,
@@ -421,6 +413,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -428,6 +421,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -478,6 +472,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -485,6 +480,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

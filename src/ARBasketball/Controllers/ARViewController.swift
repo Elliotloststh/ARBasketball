@@ -35,6 +35,7 @@ class ARViewController: BaseViewController {
         Game.instance.pause()
     }
     
+    //播放bgm
     func playBgMusic(){
         let session = AVAudioSession.sharedInstance()
         do{

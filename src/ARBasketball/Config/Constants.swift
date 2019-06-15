@@ -18,15 +18,12 @@ struct Constants {
     struct Game {
         static let numberOfFrames: Int = 10
         static let maxPlayers: Int = 4
-        static let ballLifeTime: Double = 5
+        static let ballLifeTime: Double = 3
         static let pinLifeTimeAfterKnockDown: Double = 2.5
         static let spawnDepth: Double = 1
         static let throwingIntensity: Double = 2.5
     }
-    
-    struct UserDefaults {
-        static let keyForHighscores = "highscores"
-    }
+
     
     struct Models {
         static let ball = "art.scnassets/ball.scn"
@@ -42,11 +39,6 @@ struct Constants {
         static let ballFadeOutDuration = 1.0
         static let pinFadeInDuration = 0.5
         static let pinFadeOutDuration = 0.5
-    }
-    
-    struct Text {
-        static let instructionsHold = "Touch and Hold"
-        static let instructionsRelease = "Swing and Release"
     }
     
     private init() {}

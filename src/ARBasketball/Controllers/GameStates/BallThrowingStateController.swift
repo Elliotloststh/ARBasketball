@@ -13,8 +13,6 @@ class BallThrowingStateController: GameStateController {
     @IBOutlet weak var currentBallLabel: UILabel!
     @IBOutlet weak var currentFrameLabel: UILabel!
     @IBOutlet weak var playerNameLabel: UILabel!
-    @IBOutlet weak var instructionLabel: UILabel!
-    @IBOutlet weak var instructionBox: UIView!
     
     var didThrow = false
     var pins = 0
@@ -36,7 +34,6 @@ class BallThrowingStateController: GameStateController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard !didThrow else { return }
         game.showBallPlaceholder()
-        updateInstructions(text: Constants.Text.instructionsRelease)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,7 +41,6 @@ class BallThrowingStateController: GameStateController {
         didThrow = true
         game.throwBall()
         waitForBallToFadeOut()
-        updateInstructions(text: nil)
     }
     
     private func waitForBallToFadeOut() {
@@ -75,14 +71,8 @@ class BallThrowingStateController: GameStateController {
         playerNameLabel.text = game.scoreboard.currentPlayer.name
     }
     
-    func updateInstructions(text: String?) {
-        instructionLabel.text = text
-        instructionBox.isHidden = text == nil
-    }
-    
     private func setUpNextBall() {
         updateHeader()
-        updateInstructions(text: Constants.Text.instructionsHold)
         didThrow = false
         pins = 0
     }
