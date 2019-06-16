@@ -21,13 +21,14 @@ struct Constants {
         static let ballLifeTime: Double = 3
         static let pinLifeTimeAfterKnockDown: Double = 2.5
         static let spawnDepth: Double = 1
-        static let throwingIntensity: Double = 2.5
+        static let throwingIntensity: Double = 4
     }
 
     
     struct Models {
         static let ball = "art.scnassets/ball.scn"
         static let pins = "art.scnassets/pins.scn"
+        static let hoop = "art.scnassets/hoop.scn"
     }
     
     struct NodeNames {

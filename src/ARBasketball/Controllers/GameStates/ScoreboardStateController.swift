@@ -40,7 +40,6 @@ class ScoreboardStateController: GameStateController {
     }
     
     func winnerMsg() {
-        //TODO 显示胜者名字
         let num = game.scoreboard.players.count
         var name: [String] = []
         var maxScore = game.scoreboard.players[0].score
@@ -58,6 +57,7 @@ class ScoreboardStateController: GameStateController {
         for item in name {
             msg.append(item+" ")
         }
+        msg.removeLast()
         winnerNamesLabel.text = msg
     }
 

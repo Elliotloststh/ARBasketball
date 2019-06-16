@@ -21,6 +21,7 @@ import ARKit
     // entities
     var pinsPlaceholder: SCNNode!
     var ballPlaceholder: SCNNode!
+    var hoopPlaceholder: SCNNode!
     
     var state: GameState? {
         willSet {
@@ -61,7 +62,7 @@ import ARKit
     }
     
     func createFloorNode() {
-        let floorNode = Floor(at: pinsPlaceholder.position)
+        let floorNode = Floor(at: hoopPlaceholder.position)
         sceneView.scene.rootNode.addChildNode(floorNode)
     }
     

@@ -23,7 +23,7 @@ class Floor: SCNNode {
     
     private func move(to position: SCNVector3) {
         let box = geometry as! SCNBox
-        let offset = SCNVector3(0, -Float(box.height / 2), 0)
+        let offset = SCNVector3(0, -Float(box.height / 2 + 0.6), 0)
         self.position = position + offset
     }
 }

@@ -22,7 +22,8 @@ class Frame {
     var thirdBall: Roll? { return rollForBall(atIndex: 2) }
     
     private var maxRolls: Int {
-        return number == Constants.Game.numberOfFrames ? 3 : 2
+        return 1
+//        return number == Constants.Game.numberOfFrames ? 3 : 2
     }
     
     var ballsLeft: Int {

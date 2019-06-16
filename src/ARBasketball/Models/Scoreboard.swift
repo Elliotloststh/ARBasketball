@@ -123,6 +123,7 @@ class Scoreboard {
             default:
                 if frameIndex == Constants.Game.numberOfFrames - 1 {
                     // todo: calcular o score do último frame
+                    
                 }
             }
         }

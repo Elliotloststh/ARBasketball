@@ -14,7 +14,9 @@ class PinsPositioningStateController: GameStateController {
         game.sceneView.autoenablesDefaultLighting = true
         game.sceneView.scene = SCNScene()
         game.pinsPlaceholder = createPinsPlaceholder()
+        game.hoopPlaceholder = createHoopPlaceholder()
         game.ballPlaceholder = createBallPlaceholder()
+        
     }
     
     func teardown() {
@@ -27,10 +29,10 @@ class PinsPositioningStateController: GameStateController {
         
         let hits = view.hitTest(game.viewCenter, types: [.existingPlaneUsingExtent, .estimatedHorizontalPlane])
         if let position = hits.last?.worldTransform.position {
-            game.pinsPlaceholder!.isHidden = false
+            game.hoopPlaceholder!.isHidden = false
             let cameraDirection = game.sceneView.pointOfView!.direction
-            let offset = SCNVector3(cameraDirection.x, 0, cameraDirection.z)
-            game.pinsPlaceholder!.position = position + offset
+            let offset = SCNVector3(cameraDirection.x, 0, 0.5*cameraDirection.z)
+            game.hoopPlaceholder!.position = position + offset
         }
     }
     
@@ -40,6 +42,13 @@ class PinsPositioningStateController: GameStateController {
         pins.childNodes.forEach {  $0.opacity = 0.5 }
         pins.isHidden = true
         return pins
+    }
+    
+    private func createHoopPlaceholder() -> SCNNode {
+        let hoop = SCNScene(named: Constants.Models.hoop)!.rootNode
+        game.sceneView.scene.rootNode.addChildNode(hoop)
+        hoop.isHidden = true
+        return hoop
     }
     
     private func createBallPlaceholder() -> SCNNode? {
