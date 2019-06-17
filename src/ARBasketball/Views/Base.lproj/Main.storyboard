@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +20,7 @@
             <objects>
                 <viewController storyboardIdentifier="ARViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BV1-FR-VrT" userLabel="AR View Controller" customClass="ARViewController" customModule="ARBasketball" customModuleProvider="target" sceneMemberID="viewController">
                     <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arscnView>
                     <connections>
@@ -33,27 +37,27 @@
             <objects>
                 <viewController storyboardIdentifier="TitleViewController" providesPresentationContextTransitionStyle="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mDo-wb-GQU" customClass="TitleViewController" customModule="ARBasketball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ZF-B2-BOo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-mask" translatesAutoresizingMaskIntoConstraints="NO" id="O4Q-ZK-gg7">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QP-9Z-dUj">
-                                <rect key="frame" x="242" y="104.5" width="116" height="101.5"/>
+                                <rect key="frame" x="136.5" y="167" width="141" height="119.5"/>
                                 <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="87"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSh-Gc-7nt">
-                                <rect key="frame" x="218.5" y="186" width="163.5" height="41"/>
+                                <rect key="frame" x="107.5" y="266.5" width="199.5" height="48"/>
                                 <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="35"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fai-rG-peC">
-                                <rect key="frame" x="229.5" y="333.5" width="141" height="139"/>
+                                <rect key="frame" x="136.5" y="519.5" width="141" height="139"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play-button-background" translatesAutoresizingMaskIntoConstraints="NO" id="Ig3-Aj-he0">
                                         <rect key="frame" x="-117" y="-118" width="375" height="375"/>
@@ -102,30 +106,30 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="currentContext" id="R6R-Xb-VKM" customClass="PlayerSelectionStateController" customModule="ARBasketball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOn-oX-PzZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-mask" translatesAutoresizingMaskIntoConstraints="NO" id="lDs-Y2-4gi">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tko-O5-wUN">
-                                <rect key="frame" x="0.0" y="148" width="600" height="452"/>
+                                <rect key="frame" x="0.0" y="148" width="414" height="748"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" showsReorderControl="YES" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="PlayerTableViewCell" rowHeight="60" id="jRh-Oa-4qV" customClass="PlayerTableViewCell" customModule="ARBasketball" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="60"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jRh-Oa-4qV" id="4Kj-WP-IHb">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4II-EI-hpL">
-                                                    <rect key="frame" x="20" y="0.0" width="560" height="60"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="60"/>
                                                     <subviews>
                                                         <textField opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Player name" textAlignment="natural" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jfR-Lp-D00">
-                                                            <rect key="frame" x="44" y="0.0" width="516" height="60"/>
+                                                            <rect key="frame" x="44" y="0.0" width="330" height="60"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="24"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="nickname"/>
@@ -186,7 +190,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zM-99-4Y6">
-                                <rect key="frame" x="16" y="40" width="568" height="100"/>
+                                <rect key="frame" x="16" y="64" width="382" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="j3U-BE-uQb"/>
                                 </constraints>
@@ -195,7 +199,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPy-pb-Mna">
-                                <rect key="frame" x="220" y="529" width="159" height="51"/>
+                                <rect key="frame" x="127" y="825" width="159" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="24"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -208,7 +212,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-6o-owy">
-                                <rect key="frame" x="176" y="422" width="240" height="108"/>
+                                <rect key="frame" x="85" y="675" width="240" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eo-dH-0Vg">
@@ -231,7 +235,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekM-D9-OJ3">
-                                <rect key="frame" x="536" y="66" width="48" height="48"/>
+                                <rect key="frame" x="350" y="90" width="48" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="Fy2-N4-uzN"/>
@@ -277,11 +281,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="currentContext" id="hmu-VI-5ts" customClass="HoopPositioningStateController" customModule="ARBasketball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ft-0R-K1r">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V45-vU-mW6">
-                                <rect key="frame" x="176" y="422" width="240" height="108"/>
+                                <rect key="frame" x="85" y="675" width="240" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yR7-3d-BgH">
@@ -318,18 +322,18 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="currentContext" id="96D-oP-4QQ" customClass="BallThrowingStateController" customModule="ARBasketball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DW3-Xl-rM5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGF-Vq-yGC">
-                                <rect key="frame" x="0.0" y="20" width="600" height="76"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="76"/>
                                 <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxi-KL-4ce">
-                                <rect key="frame" x="8" y="28" width="60" height="60"/>
+                                <rect key="frame" x="8" y="52" width="60" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ln6-HT-B2b">
-                                        <rect key="frame" x="23.5" y="16" width="13" height="28"/>
+                                        <rect key="frame" x="23.5" y="13.5" width="13" height="33"/>
                                         <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -344,10 +348,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFd-VS-6Ge">
-                                <rect key="frame" x="68" y="28" width="468" height="60"/>
+                                <rect key="frame" x="68" y="52" width="282" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFl-Fo-1qN">
-                                        <rect key="frame" x="0.0" y="0.0" width="468" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="60"/>
                                         <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="32"/>
                                         <color key="textColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -362,14 +366,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lef-LF-Evp">
-                                <rect key="frame" x="536" y="28" width="56" height="60"/>
+                                <rect key="frame" x="350" y="52" width="56" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40314640410958902" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRr-3Y-5Ri">
-                                <rect key="frame" x="544" y="38" width="40" height="40"/>
+                                <rect key="frame" x="358" y="62" width="40" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NA2-uj-TWp">
-                                        <rect key="frame" x="15" y="9.5" width="10" height="21"/>
+                                        <rect key="frame" x="15" y="7.5" width="10" height="25"/>
                                         <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -426,15 +430,15 @@
             <objects>
                 <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="currentContext" id="pMX-Vu-EGu" customClass="ScoreboardStateController" customModule="ARBasketball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ubT-DR-GOI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-mask" translatesAutoresizingMaskIntoConstraints="NO" id="KMm-Zv-axg">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scoreboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dq4-dc-TVF">
-                                <rect key="frame" x="16" y="28" width="568" height="60"/>
+                                <rect key="frame" x="16" y="52" width="382" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="KGk-1H-2qY"/>
                                 </constraints>
@@ -443,11 +447,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8s3-Qq-guH">
-                                <rect key="frame" x="0.0" y="88" width="600" height="512"/>
+                                <rect key="frame" x="0.0" y="112" width="414" height="750"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="VQT-qB-i9l">
-                                    <rect key="frame" x="0.0" y="148" width="375" height="150"/>
+                                    <rect key="frame" x="0.0" y="148" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00q-r3-mfd">
@@ -476,27 +480,27 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScoreboardTableViewCell" id="1Mx-Q1-YcD" customClass="ScoreboardTableViewCell" customModule="ARBasketball" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="120"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Mx-Q1-YcD" id="QV1-Zj-fTZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ssD-qH-yCa">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="112"/>
+                                                    <rect key="frame" x="8" y="0.0" width="398" height="112"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cST-g9-mYG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="36"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="36"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQg-5T-Zi8">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="325.5" height="36"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="356" height="36"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="249" text="300" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRP-3y-RmG">
-                                                                    <rect key="frame" x="325.5" y="0.0" width="33.5" height="36"/>
+                                                                    <rect key="frame" x="356" y="0.0" width="42" height="36"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="20"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -505,52 +509,52 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="GqR-fO-FMo">
-                                                            <rect key="frame" x="0.0" y="38" width="359" height="36"/>
+                                                            <rect key="frame" x="0.0" y="38" width="398" height="36"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gv8-ru-Xrs" customClass="FrameView" customModule="ARBasketball" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="36"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="78" height="36"/>
                                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
                                                                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Op-cr-CXe" customClass="FrameView" customModule="ARBasketball" customModuleProvider="target">
-                                                                    <rect key="frame" x="72" y="0.0" width="70.5" height="36"/>
+                                                                    <rect key="frame" x="80" y="0.0" width="78" height="36"/>
                                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
                                                                 <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4p-oQ-0CW" customClass="FrameView" customModule="ARBasketball" customModuleProvider="target">
-                                                                    <rect key="frame" x="144.5" y="0.0" width="70" height="36"/>
+                                                                    <rect key="frame" x="160" y="0.0" width="78" height="36"/>
                                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
                                                                 <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5J-Al-eDu" customClass="FrameView" customModule="ARBasketball" customModuleProvider="target">
-                                                                    <rect key="frame" x="216.5" y="0.0" width="70.5" height="36"/>
+                                                                    <rect key="frame" x="240" y="0.0" width="78" height="36"/>
                                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
                                                                 <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmq-Jn-JT0" customClass="FrameView" customModule="ARBasketball" customModuleProvider="target">
-                                                                    <rect key="frame" x="289" y="0.0" width="70" height="36"/>
+                                                                    <rect key="frame" x="320" y="0.0" width="78" height="36"/>
                                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mIP-id-tIp">
-                                                            <rect key="frame" x="0.0" y="76" width="359" height="36"/>
+                                                            <rect key="frame" x="0.0" y="76" width="398" height="36"/>
                                                             <subviews>
                                                                 <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nN-7Q-0H2" customClass="FrameView" customModule="ARBasketball" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="36"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="78" height="36"/>
                                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
                                                                 <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lik-gA-rMu" customClass="FrameView" customModule="ARBasketball" customModuleProvider="target">
-                                                                    <rect key="frame" x="72" y="0.0" width="70.5" height="36"/>
+                                                                    <rect key="frame" x="80" y="0.0" width="78" height="36"/>
                                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
                                                                 <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIk-sk-bwB" customClass="FrameView" customModule="ARBasketball" customModuleProvider="target">
-                                                                    <rect key="frame" x="144.5" y="0.0" width="70" height="36"/>
+                                                                    <rect key="frame" x="160" y="0.0" width="78" height="36"/>
                                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
                                                                 <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-nM-oWc" customClass="FrameView" customModule="ARBasketball" customModuleProvider="target">
-                                                                    <rect key="frame" x="216.5" y="0.0" width="70.5" height="36"/>
+                                                                    <rect key="frame" x="240" y="0.0" width="78" height="36"/>
                                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
-                                                                <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bG5-J4-rLh" customClass="LastFrameView" customModule="ARBasketball" customModuleProvider="target">
-                                                                    <rect key="frame" x="289" y="0.0" width="70" height="36"/>
+                                                                <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bG5-J4-rLh" customClass="FrameView" customModule="ARBasketball" customModuleProvider="target">
+                                                                    <rect key="frame" x="320" y="0.0" width="78" height="36"/>
                                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
                                                             </subviews>
@@ -570,7 +574,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="lastFrameView" destination="bG5-J4-rLh" id="4ff-Bj-u6h"/>
                                             <outlet property="playerNameLabel" destination="nQg-5T-Zi8" id="SFc-E0-YYA"/>
                                             <outlet property="playerScoreLabel" destination="kRP-3y-RmG" id="PLu-li-8kc"/>
                                             <outletCollection property="frameViews" destination="gv8-ru-Xrs" collectionClass="NSMutableArray" id="cgS-Yg-g9a"/>
@@ -582,13 +585,14 @@
                                             <outletCollection property="frameViews" destination="lik-gA-rMu" collectionClass="NSMutableArray" id="GLP-Gk-Y6C"/>
                                             <outletCollection property="frameViews" destination="BIk-sk-bwB" collectionClass="NSMutableArray" id="bGs-AP-thW"/>
                                             <outletCollection property="frameViews" destination="Fd7-nM-oWc" collectionClass="NSMutableArray" id="Eoz-ub-cTg"/>
+                                            <outletCollection property="frameViews" destination="bG5-J4-rLh" collectionClass="NSMutableArray" id="cvc-EG-jKN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3h-4Q-5es">
-                                <rect key="frame" x="220" y="529" width="159" height="51"/>
+                                <rect key="frame" x="127" y="825" width="159" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="24"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -601,7 +605,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cR-b4-YVs">
-                                <rect key="frame" x="220" y="529" width="159" height="51"/>
+                                <rect key="frame" x="127" y="825" width="159" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="24"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>

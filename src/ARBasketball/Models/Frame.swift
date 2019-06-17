@@ -13,6 +13,8 @@ class Frame {
     let number: Int
     let maxNumber: Int = 10
     
+    var cellScore : String
+    
     private (set) var rolls = [Roll]()
     private (set) var score: Int?
     private (set) var ballIndex = 0
@@ -54,6 +56,7 @@ class Frame {
     
     init(number: Int) {
         self.number = number
+        self.cellScore = "0"
     }
     
     var previousRoll: Roll? {

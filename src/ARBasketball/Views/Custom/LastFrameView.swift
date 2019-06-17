@@ -10,10 +10,9 @@ import UIKit
 
 class LastFrameView: FrameView {
     
-    @IBOutlet weak var thirdBallScoreLabel: UILabel!
-    
+    @IBOutlet weak var scoreLabel: UILabel!
     override func update(frame: Frame) {
         super.update(frame: frame)
-        thirdBallScoreLabel.text = frame.thirdBall?.description
+        scoreLabel.text = frame.thirdBall?.description
     }
 }
