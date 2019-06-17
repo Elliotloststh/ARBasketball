@@ -16,7 +16,7 @@
 		568E3C27204C22A600E6C906 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568E3C26204C22A600E6C906 /* Floor.swift */; };
 		568E3C29204C277700E6C906 /* PinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568E3C28204C277700E6C906 /* PinSet.swift */; };
 		569032C720498B7900867939 /* PlayerSelectionStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032C620498B7900867939 /* PlayerSelectionStateController.swift */; };
-		569032C920498BB400867939 /* PinsPositioningStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032C820498BB400867939 /* PinsPositioningStateController.swift */; };
+		569032C920498BB400867939 /* HoopPositioningStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032C820498BB400867939 /* HoopPositioningStateController.swift */; };
 		569032CD20498C1600867939 /* BallThrowingStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032CC20498C1600867939 /* BallThrowingStateController.swift */; };
 		569032D120498CAA00867939 /* ScoreboardStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032D020498CAA00867939 /* ScoreboardStateController.swift */; };
 		569032D42049A27400867939 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569032D32049A27400867939 /* PlayerTableViewCell.swift */; };
@@ -45,6 +45,7 @@
 		56BF1D9D2048AAE1006A46E0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF1D9C2048AAE1006A46E0 /* BaseViewController.swift */; };
 		56BF1DAE2048D253006A46E0 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF1DAD2048D253006A46E0 /* GameState.swift */; };
 		56BF1DB3204978DB006A46E0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF1DB2204978DB006A46E0 /* Game.swift */; };
+		8B7482EC22B69B0900A6C534 /* Hoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7482EB22B69B0900A6C534 /* Hoop.swift */; };
 		8BF6F57E22B53F8800146CFB /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BF6F57D22B53F8700146CFB /* bgm.mp3 */; };
 		8BF6F58022B542AB00146CFB /* bgm2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BF6F57F22B542AA00146CFB /* bgm2.mp3 */; };
 /* End PBXBuildFile section */
@@ -59,7 +60,7 @@
 		568E3C26204C22A600E6C906 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
 		568E3C28204C277700E6C906 /* PinSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinSet.swift; sourceTree = "<group>"; };
 		569032C620498B7900867939 /* PlayerSelectionStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionStateController.swift; sourceTree = "<group>"; };
-		569032C820498BB400867939 /* PinsPositioningStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinsPositioningStateController.swift; sourceTree = "<group>"; };
+		569032C820498BB400867939 /* HoopPositioningStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoopPositioningStateController.swift; sourceTree = "<group>"; };
 		569032CC20498C1600867939 /* BallThrowingStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallThrowingStateController.swift; sourceTree = "<group>"; };
 		569032D020498CAA00867939 /* ScoreboardStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardStateController.swift; sourceTree = "<group>"; };
 		569032D32049A27400867939 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		56BF1D9C2048AAE1006A46E0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		56BF1DAD2048D253006A46E0 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		56BF1DB2204978DB006A46E0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8B7482EB22B69B0900A6C534 /* Hoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hoop.swift; sourceTree = "<group>"; };
 		8BF6F57D22B53F8700146CFB /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
 		8BF6F57F22B542AA00146CFB /* bgm2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +113,7 @@
 				56BF1DAD2048D253006A46E0 /* GameState.swift */,
 				56195584204BFFF900D004CA /* GameStateController.swift */,
 				569032C620498B7900867939 /* PlayerSelectionStateController.swift */,
-				569032C820498BB400867939 /* PinsPositioningStateController.swift */,
+				569032C820498BB400867939 /* HoopPositioningStateController.swift */,
 				569032CC20498C1600867939 /* BallThrowingStateController.swift */,
 				569032D020498CAA00867939 /* ScoreboardStateController.swift */,
 			);
@@ -252,6 +254,7 @@
 				56BF1D8F20478459006A46E0 /* Ball.swift */,
 				568E3C26204C22A600E6C906 /* Floor.swift */,
 				568E3C28204C277700E6C906 /* PinSet.swift */,
+				8B7482EB22B69B0900A6C534 /* Hoop.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -358,7 +361,7 @@
 				56BF1DB3204978DB006A46E0 /* Game.swift in Sources */,
 				569032D120498CAA00867939 /* ScoreboardStateController.swift in Sources */,
 				569032D42049A27400867939 /* PlayerTableViewCell.swift in Sources */,
-				569032C920498BB400867939 /* PinsPositioningStateController.swift in Sources */,
+				569032C920498BB400867939 /* HoopPositioningStateController.swift in Sources */,
 				564CD2DE204B861C006F2CD4 /* SCNNode.swift in Sources */,
 				56BF1D952047884D006A46E0 /* matrix_float4x4.swift in Sources */,
 				568E3C25204C21F400E6C906 /* Physics.swift in Sources */,
@@ -369,6 +372,7 @@
 				56B761D32049E9850003A02B /* Scoreboard.swift in Sources */,
 				569032D92049C24600867939 /* Constants.swift in Sources */,
 				56195585204BFFF900D004CA /* GameStateController.swift in Sources */,
+				8B7482EC22B69B0900A6C534 /* Hoop.swift in Sources */,
 				569A38B5204CE54500B2EA36 /* LastFrameView.swift in Sources */,
 				569032CD20498C1600867939 /* BallThrowingStateController.swift in Sources */,
 				56BF1D792047822E006A46E0 /* AppDelegate.swift in Sources */,

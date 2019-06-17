@@ -18,7 +18,8 @@ class BallThrowingStateController: GameStateController {
     var pins = 0
     
     func setup() {
-        resetPins()
+//        resetPins()
+        resetHoop()
         setUpNextBall()
         game.sceneView.scene.physicsWorld.contactDelegate = self
     }
@@ -56,6 +57,12 @@ class BallThrowingStateController: GameStateController {
                 this.showScoreboard(gameOver: true)
             }
         }
+    }
+    
+    private func resetHoop() {
+        game.hoopPlaceholder.childNodes.forEach { $0.removeFromParentNode() }
+        let hoop = Hoop.create(position: SCNVector3Zero)
+        game.hoopPlaceholder.addChildNode(hoop)
     }
     
     private func resetPins() {
