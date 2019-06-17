@@ -51,7 +51,7 @@ class Hoop: SCNNode {
     
     private func addRimPhysicsBody(to node:SCNNode){
         let physicsShape = SCNPhysicsShape(node: node, options: [SCNPhysicsShape.Option.type : SCNPhysicsShape.ShapeType.concavePolyhedron])
-        node.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
+        node.physicsBody = SCNPhysicsBody(type: .static, shape: physicsShape)
         
         node.name = "rim"
         //TODO
