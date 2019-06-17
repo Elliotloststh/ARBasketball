@@ -41,21 +41,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QP-9Z-dUj">
-<<<<<<< HEAD
-                                <rect key="frame" x="117" y="112" width="141" height="119.5"/>
-=======
                                 <rect key="frame" x="242" y="104.5" width="116" height="101.5"/>
->>>>>>> 1dcc6acbd30e8d7ad19d2b78b20754909ae48bce
                                 <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="87"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSh-Gc-7nt">
-<<<<<<< HEAD
-                                <rect key="frame" x="88" y="211.5" width="199.5" height="48"/>
-=======
                                 <rect key="frame" x="218.5" y="186" width="163.5" height="41"/>
->>>>>>> 1dcc6acbd30e8d7ad19d2b78b20754909ae48bce
                                 <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="35"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

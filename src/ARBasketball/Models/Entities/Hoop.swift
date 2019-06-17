@@ -24,6 +24,7 @@ class Hoop: SCNNode {
         addChildNode(model)
         
         guard let backboardNode = model.childNode(withName: "backboard", recursively: true) else { return}
+        guard let netNode = model.childNode(withName: "net", recursively: true) else { return}
 //        guard let rim = model.childNode(withName: "rim", recursively: false) else { return  }
         
         for child in backboardNode.childNodes{
@@ -34,6 +35,7 @@ class Hoop: SCNNode {
             }
         }
         addBoardPhysicsBody(to: backboardNode)
+        addNetPhysicsBody(to: netNode)
 //        addRimPhysicsBody(to: rim)
 //        scheduleRemoval()
     }
@@ -41,6 +43,17 @@ class Hoop: SCNNode {
     private func addBoardPhysicsBody(to node: SCNNode) {
         let physicsShape = SCNPhysicsShape(node: node, options: [SCNPhysicsShape.Option.type : SCNPhysicsShape.ShapeType.concavePolyhedron])
         node.physicsBody = SCNPhysicsBody(type: .static, shape: physicsShape)
+        
+        
+        //TODO
+        node.physicsBody!.categoryBitMask = Physics.CategoryBitMask.pin
+        node.physicsBody!.collisionBitMask = Physics.CategoryBitMask.allSolids
+        node.physicsBody!.contactTestBitMask = Physics.CategoryBitMask.ball
+    }
+    
+    private func addNetPhysicsBody(to node: SCNNode) {
+        let physicsShape = SCNPhysicsShape(node: node, options: [SCNPhysicsShape.Option.type : SCNPhysicsShape.ShapeType.concavePolyhedron])
+        node.physicsBody = SCNPhysicsBody(type: .kinematic, shape: physicsShape)
         
         
         //TODO
@@ -59,13 +72,5 @@ class Hoop: SCNNode {
         node.physicsBody!.collisionBitMask = Physics.CategoryBitMask.allSolids
         node.physicsBody!.contactTestBitMask = Physics.CategoryBitMask.ball
     }
-    
-//    private func addRimPhysicsBody(to node: SCNNode) {
-//        let physicsShape = SCNPhysicsShape(node: node, options: [SCNPhysicsShape.Option.type : SCNPhysicsShape.ShapeType.convexHull])
-//        node.physicsBody = SCNPhysicsBody(type: .static, shape: physicsShape)
-//
-//        //TODO
-//        node.physicsBody!.categoryBitMask = Physics.CategoryBitMask.pin
-//        node.physicsBody!.collisionBitMask = Physics.CategoryBitMask.allSolids
-//    }
+
 }

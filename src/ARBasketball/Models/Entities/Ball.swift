@@ -52,7 +52,7 @@ class Ball: SCNNode {
     }
     
     private func addPhysicsBody() {
-        let sphere = SCNSphere(radius: 0.1)
+        let sphere = SCNSphere(radius: 0.15)
         let sphereShape = SCNPhysicsShape(geometry: sphere, options: nil)
         physicsBody = SCNPhysicsBody(type: .dynamic, shape: sphereShape)
         physicsBody!.categoryBitMask = Physics.CategoryBitMask.ball
