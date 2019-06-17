@@ -18,7 +18,8 @@ class BallThrowingStateController: GameStateController {
     var pins = 0
     
     func setup() {
-        resetPins()
+//        resetPins()
+        resetHoop()
         setUpNextBall()
         game.sceneView.scene.physicsWorld.contactDelegate = self
     }
@@ -58,6 +59,12 @@ class BallThrowingStateController: GameStateController {
         }
     }
     
+    private func resetHoop() {
+//        game.hoopPlaceholder.childNodes.forEach { $0.removeFromParentNode() }
+        let hoop = Hoop.create(position: SCNVector3Zero)
+        game.hoopPlaceholder.addChildNode(hoop)
+    }
+    
     private func resetPins() {
         game.pinsPlaceholder.childNodes.forEach { $0.removeFromParentNode() }
     
@@ -94,6 +101,10 @@ extension BallThrowingStateController: SCNPhysicsContactDelegate {
     
     func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
         let nodes = [contact.nodeA, contact.nodeB]
+        guard let rim = nodes.first(where:{ $0.name == "rim"}) else {
+            return
+        }
+        print("FUCK#########################################");
         guard let pinHead = nodes.first(where: { $0.name == Constants.NodeNames.pinHead }) else { return }
         
         // animations
