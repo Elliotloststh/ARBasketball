@@ -45,13 +45,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QP-9Z-dUj">
-                                <rect key="frame" x="129.5" y="121" width="116" height="101.5"/>
+                                <rect key="frame" x="117" y="112" width="141" height="119.5"/>
                                 <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="87"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSh-Gc-7nt">
-                                <rect key="frame" x="106" y="202.5" width="163.5" height="41"/>
+                                <rect key="frame" x="88" y="211.5" width="199.5" height="48"/>
                                 <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="35"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -450,6 +450,34 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="579"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="VQT-qB-i9l">
+                                    <rect key="frame" x="0.0" y="148" width="375" height="150"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00q-r3-mfd">
+                                            <rect key="frame" x="110" y="-1" width="104" height="41"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="25"/>
+                                            <color key="textColor" red="1" green="0.8711161366461988" blue="0.17468939817745999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Names" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-hj-Tzf" userLabel="WinnerNames">
+                                            <rect key="frame" x="8" y="66" width="309" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="19"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="240" id="6KZ-Fa-P6s"/>
+                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="9cz-Pv-0Z8"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="Vqb-cf-ZZd"/>
+                                        <constraint firstAttribute="height" constant="60" id="hvW-Dh-HCP"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="pCR-Lm-IAk"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScoreboardTableViewCell" id="1Mx-Q1-YcD" customClass="ScoreboardTableViewCell" customModule="ARBasketball" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
@@ -576,33 +604,6 @@
                                     <action selector="nextTapped:" destination="pMX-Vu-EGu" eventType="touchUpInside" id="Jqv-Ye-QWL"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQT-qB-i9l">
-                                <rect key="frame" x="20" y="358.5" width="325" height="150"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00q-r3-mfd">
-                                        <rect key="frame" x="110" y="-1" width="104" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="25"/>
-                                        <color key="textColor" red="1" green="0.8711161366461988" blue="0.17468939817745999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Names" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-hj-Tzf" userLabel="WinnerNames">
-                                        <rect key="frame" x="8" y="66" width="309" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AlfaSlabOne-Regular" family="Alfa Slab One" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="6KZ-Fa-P6s"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="9cz-Pv-0Z8"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="Vqb-cf-ZZd"/>
-                                    <constraint firstAttribute="height" constant="60" id="hvW-Dh-HCP"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="pCR-Lm-IAk"/>
-                                </constraints>
-                            </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cR-b4-YVs">
                                 <rect key="frame" x="108" y="596" width="159" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -619,22 +620,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VQT-qB-i9l" firstAttribute="top" secondItem="Dq4-dc-TVF" secondAttribute="bottom" constant="20" id="0lg-kz-vXy"/>
                             <constraint firstItem="Dq4-dc-TVF" firstAttribute="leading" secondItem="3iT-2y-Owj" secondAttribute="leading" constant="16" id="11X-4Y-nt9"/>
                             <constraint firstItem="8s3-Qq-guH" firstAttribute="trailing" secondItem="3iT-2y-Owj" secondAttribute="trailing" id="6TD-OV-Mec"/>
                             <constraint firstItem="8s3-Qq-guH" firstAttribute="top" secondItem="Dq4-dc-TVF" secondAttribute="bottom" id="9ho-2C-pOr"/>
-                            <constraint firstItem="VQT-qB-i9l" firstAttribute="leading" secondItem="3iT-2y-Owj" secondAttribute="leading" constant="30" id="9rY-9n-bX8"/>
-                            <constraint firstItem="3iT-2y-Owj" firstAttribute="trailing" secondItem="VQT-qB-i9l" secondAttribute="trailing" constant="20" id="ChV-n3-OUA"/>
                             <constraint firstItem="3iT-2y-Owj" firstAttribute="trailing" secondItem="Dq4-dc-TVF" secondAttribute="trailing" constant="16" id="EUZ-en-tLa"/>
                             <constraint firstItem="8s3-Qq-guH" firstAttribute="bottom" secondItem="3iT-2y-Owj" secondAttribute="bottom" id="T4k-jz-xSi"/>
-                            <constraint firstItem="VQT-qB-i9l" firstAttribute="top" secondItem="Dq4-dc-TVF" secondAttribute="bottom" constant="230" id="ViH-cc-Oef"/>
-                            <constraint firstItem="3iT-2y-Owj" firstAttribute="trailing" secondItem="VQT-qB-i9l" secondAttribute="trailing" constant="37.5" id="Wr8-UN-Krt"/>
-                            <constraint firstItem="VQT-qB-i9l" firstAttribute="top" secondItem="Dq4-dc-TVF" secondAttribute="bottom" constant="270.5" id="aRP-U0-y0F"/>
-                            <constraint firstItem="3iT-2y-Owj" firstAttribute="trailing" secondItem="VQT-qB-i9l" secondAttribute="trailing" constant="30" id="gjx-W4-Ou9"/>
-                            <constraint firstItem="VQT-qB-i9l" firstAttribute="leading" secondItem="3iT-2y-Owj" secondAttribute="leading" constant="37.5" id="nvn-om-oaJ"/>
                             <constraint firstItem="Dq4-dc-TVF" firstAttribute="top" secondItem="3iT-2y-Owj" secondAttribute="top" constant="8" id="oD7-f3-ZsV"/>
                             <constraint firstItem="8s3-Qq-guH" firstAttribute="leading" secondItem="3iT-2y-Owj" secondAttribute="leading" id="tHJ-8T-rno"/>
-                            <constraint firstItem="VQT-qB-i9l" firstAttribute="leading" secondItem="3iT-2y-Owj" secondAttribute="leading" constant="20" id="x8e-tF-gfe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3iT-2y-Owj"/>
                     </view>
