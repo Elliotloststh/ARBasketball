@@ -1,6 +1,6 @@
 //
 //  PinsPositioningStateController.swift
-//  NanoChallenge5
+//  ARBasketball
 //
 //  Created by Charles Ferreira on 02/03/2018.
 //  Copyright © 2018 Charles Ferreira. All rights reserved.
@@ -13,12 +13,8 @@ class HoopPositioningStateController: GameStateController {
     func setup() {
         game.sceneView.autoenablesDefaultLighting = true
         game.sceneView.scene = SCNScene()
-//        game.pinsPlaceholder = createPinsPlaceholder()
         game.hoopPlaceholder = createHoopPlaceholder()
         game.ballPlaceholder = createBallPlaceholder()
-        
-//        game.pinsPlaceholder.addChildNode(Hoop.create(position: SCNVector3Zero))
-        
     }
     
     func teardown() {
@@ -32,14 +28,12 @@ class HoopPositioningStateController: GameStateController {
         let hits = view.hitTest(game.viewCenter, types: [.existingPlaneUsingExtent, .estimatedHorizontalPlane])
         if let position = hits.last?.worldTransform.position {
             game.hoopPlaceholder!.isHidden = false
-//            game.pinsPlaceholder!.isHidden = false
             var yOff = game.sceneView.pointOfView!.direction.y
             if (yOff < 0){
                 yOff = -yOff
             }
             yOff *= 30
             game.hoopPlaceholder!.simdPosition = game.sceneView.pointOfView!.simdWorldFront + simd_float3(0, 0, -2.0-yOff)
-//            game.pinsPlaceholder!.position = position + offset
         }
     }
     

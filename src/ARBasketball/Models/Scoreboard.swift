@@ -1,6 +1,6 @@
 //
 //  Scoreboard.swift
-//  NanoChallenge5
+//  ARBasketball
 //
 //  Created by Charles Ferreira on 02/03/2018.
 //  Copyright © 2018 Charles Ferreira. All rights reserved.
@@ -34,7 +34,8 @@ class Scoreboard {
     
     func resetFrames() {
         frames = []
-        players.forEach { _ in
+        players.forEach { player in
+            player.score = 0
             var playerFrames = [Frame]()
             for frameNumber in 1...Constants.Game.numberOfFrames {
                 playerFrames.append(Frame(number: frameNumber))

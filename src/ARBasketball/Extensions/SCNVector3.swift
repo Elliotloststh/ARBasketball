@@ -1,6 +1,6 @@
 //
 //  SCNVector3.swift
-//  NanoChallenge5
+//  ARBasketball
 //
 //  Created by Charles Ferreira on 28/02/2018.
 //  Copyright © 2018 Charles Ferreira. All rights reserved.

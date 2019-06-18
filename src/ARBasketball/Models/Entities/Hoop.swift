@@ -46,7 +46,7 @@ class Hoop: SCNNode {
         
         
         //TODO
-        node.physicsBody!.categoryBitMask = Physics.CategoryBitMask.pin
+        node.physicsBody!.categoryBitMask = Physics.CategoryBitMask.hoop
         node.physicsBody!.collisionBitMask = Physics.CategoryBitMask.allSolids
         node.physicsBody!.contactTestBitMask = Physics.CategoryBitMask.ball
     }
@@ -57,7 +57,7 @@ class Hoop: SCNNode {
         
         
         //TODO
-        node.physicsBody!.categoryBitMask = Physics.CategoryBitMask.pin
+        node.physicsBody!.categoryBitMask = Physics.CategoryBitMask.hoop
         node.physicsBody!.collisionBitMask = Physics.CategoryBitMask.allSolids
         node.physicsBody!.contactTestBitMask = Physics.CategoryBitMask.ball
     }
@@ -68,7 +68,7 @@ class Hoop: SCNNode {
         
         node.name = "rim"
         //TODO
-        node.physicsBody!.categoryBitMask = Physics.CategoryBitMask.pin
+        node.physicsBody!.categoryBitMask = Physics.CategoryBitMask.hoop
         node.physicsBody!.collisionBitMask = Physics.CategoryBitMask.allSolids
         node.physicsBody!.contactTestBitMask = Physics.CategoryBitMask.ball
     }

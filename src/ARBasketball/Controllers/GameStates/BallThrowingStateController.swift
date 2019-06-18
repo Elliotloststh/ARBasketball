@@ -1,6 +1,6 @@
 //
 //  BallThrowingStateController.swift
-//  NanoChallenge5
+//  ARBasketball
 //
 //  Created by Charles Ferreira on 02/03/2018.
 //  Copyright © 2018 Charles Ferreira. All rights reserved.
@@ -18,7 +18,6 @@ class BallThrowingStateController: GameStateController {
     var pins = 0
     
     func setup() {
-//        resetPins()
         resetHoop()
         setUpNextBall()
         game.sceneView.scene.physicsWorld.contactDelegate = self
@@ -96,13 +95,6 @@ class BallThrowingStateController: GameStateController {
 //        game.hoopPlaceholder.childNodes.forEach { $0.removeFromParentNode() }
         let hoop = Hoop.create(position: SCNVector3Zero)
         game.hoopPlaceholder.addChildNode(hoop)
-    }
-    
-    private func resetPins() {
-        game.pinsPlaceholder.childNodes.forEach { $0.removeFromParentNode() }
-    
-        let pinSet = PinSet.create(position: SCNVector3Zero)
-        game.pinsPlaceholder.addChildNode(pinSet)
     }
     
     func updateHeader() {
