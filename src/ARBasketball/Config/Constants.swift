@@ -26,7 +26,7 @@ struct Constants {
 
     
     struct Models {
-        static let ball = "art.scnassets/ball.scn"
+        static let ball = "art.scnassets/Basketball.scn"
         static let pins = "art.scnassets/pins.scn"
         static let hoop = "art.scnassets/hoop.scn"
     }
