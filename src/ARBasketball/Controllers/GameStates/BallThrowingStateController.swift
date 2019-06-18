@@ -40,11 +40,38 @@ class BallThrowingStateController: GameStateController {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard !didThrow else { return }
         didThrow = true
-        game.throwBall()
-        waitForBallToFadeOut()
+        
+        waitForBallToFadeOut(ballNode: game.throwBall())
     }
     
-    private func waitForBallToFadeOut() {
+    private func waitForBallToFadeOut(ballNode: Ball) {
+        var score = 0
+        var count = 0
+        Timer.scheduledTimer(withTimeInterval: Constants.Game.ballLifeTime/20, repeats: true) {
+            timer1 in
+            
+            var ballVector = ballNode.presentation.worldPosition
+            var rimVector = self.game.hoopPlaceholder.childNode(withName: "backboard", recursively: false)?.childNode(withName: "rim", recursively: false)?.worldPosition
+            
+//            ballVector = ballVector + SCNVector3(0, 0.15, 0)
+            rimVector = rimVector! + SCNVector3(0.15, 0.2, 0.15)
+            
+            print(ballVector)
+            print(rimVector)
+            
+//            let distance = ballVector-rimVector!
+//
+//            let length: Float = sqrtf(distance.x * distance.x + distance.y * distance.y + distance.z * distance.z)
+//            print(length)
+            count += 1
+            if count==20 {
+                timer1.invalidate()
+            }
+            
+        }
+        
+        
+        
         Timer.scheduledTimer(withTimeInterval: Constants.Game.ballLifeTime, repeats: false) { [weak self] _ in
             guard let this = self else { return }
             let throwResults = this.game.scoreboard.roll(pins: this.pins)

@@ -4,6 +4,7 @@ class Ball: SCNNode {
     
     private static let shared = Ball(model: SCNScene(named: Constants.Models.ball)!.rootNode)
     
+    
     static func create() -> Ball {
         return shared.clone()
     }

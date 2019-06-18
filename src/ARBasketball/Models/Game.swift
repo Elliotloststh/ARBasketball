@@ -75,11 +75,13 @@ import ARKit
         ballPlaceholder.opacity = 0
     }
     
-    func throwBall() {
+    func throwBall() -> Ball {
         hideBallPlaceholder()
+        
         
         let velocity = camera.velocity * Constants.Game.throwingIntensity
         let ball = Ball.create(position: spawnPoint, velocity: velocity)
         sceneView.scene.rootNode.addChildNode(ball)
+        return ball
     }
 }

@@ -21,7 +21,7 @@ struct Constants {
         static let ballLifeTime: Double = 3
         static let pinLifeTimeAfterKnockDown: Double = 2.5
         static let spawnDepth: Double = 1
-        static let throwingIntensity: Double = 4
+        static let throwingIntensity: Double = 3
     }
 
     
