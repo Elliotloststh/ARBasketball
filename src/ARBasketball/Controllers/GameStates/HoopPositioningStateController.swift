@@ -33,9 +33,13 @@ class HoopPositioningStateController: GameStateController {
         if let position = hits.last?.worldTransform.position {
             game.hoopPlaceholder!.isHidden = false
 //            game.pinsPlaceholder!.isHidden = false
-            let cameraDirection = game.sceneView.pointOfView!.direction
-            let offset = SCNVector3(cameraDirection.x, 0, 0.5*cameraDirection.z)
-            game.hoopPlaceholder!.position = position + offset
+            var yOff = game.sceneView.pointOfView!.direction.y
+            print("YOFF\(yOff)")
+            if (yOff < 0){
+                yOff = -yOff
+            }
+            yOff *= 30
+            game.hoopPlaceholder!.simdPosition = game.sceneView.pointOfView!.simdWorldFront + simd_float3(0, 0, -2.0-yOff)
 //            game.pinsPlaceholder!.position = position + offset
         }
     }
