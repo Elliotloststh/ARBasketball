@@ -47,23 +47,28 @@ class BallThrowingStateController: GameStateController {
     private func waitForBallToFadeOut(ballNode: Ball) {
         var score = 0
         var count = 0
-        Timer.scheduledTimer(withTimeInterval: Constants.Game.ballLifeTime/20, repeats: true) {
+        Timer.scheduledTimer(withTimeInterval: Constants.Game.ballLifeTime/50, repeats: true) {
             timer1 in
             
             var ballVector = ballNode.presentation.worldPosition
-            var rimVector = self.game.hoopPlaceholder.childNode(withName: "backboard", recursively: false)?.childNode(withName: "rim", recursively: false)?.worldPosition
-        
-            rimVector = rimVector! + SCNVector3(0.15, 0.2, 0.15)
+            var rimNode = self.game.hoopPlaceholder.childNode(withName: "backboard", recursively: false)?.childNode(withName: "rim", recursively: false)
+            var rimVector = rimNode?.presentation.worldPosition
             
-            print(ballVector)
-            print(rimVector)
+//            rimVector = convertPosition(rimVector,ballNode)
+//            ballNode.convertVector(ballVector, to: rimNode)
             
-//            let distance = ballVector-rimVector!
-//
-//            let length: Float = sqrtf(distance.x * distance.x + distance.y * distance.y + distance.z * distance.z)
-//            print(length)
+            
+            rimVector = rimVector! + SCNVector3(0, 0.2, 0.5)
+            print(ballVector, rimVector)
+            let distance = ballVector-rimVector!
+
+            let length: Float = sqrtf(distance.x * distance.x + distance.y * distance.y + distance.z * distance.z)
+            print(length)
+            
+            
+            
             count += 1
-            if count==20 {
+            if count==50 {
                 timer1.invalidate()
             }
             
