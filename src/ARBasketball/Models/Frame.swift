@@ -14,14 +14,9 @@ class Frame {
     let maxNumber: Int = 10
     
     var cellScore : String
-    
-    private (set) var rolls = [Roll]()
-    private (set) var score: Int?
+
     private (set) var ballIndex = 0
-    
-    var firstBall: Roll? { return rollForBall(atIndex: 0) }
-    var secondBall: Roll? { return rollForBall(atIndex: 1) }
-    var thirdBall: Roll? { return rollForBall(atIndex: 2) }
+
     
     private var maxRolls: Int {
         return 1
@@ -32,26 +27,8 @@ class Frame {
         return maxRolls - ballIndex
     }
     
-    var pinsLeft: Int {
-        guard let lastRoll = rolls.last else { return maxNumber }
-        switch lastRoll.type {
-        case .open(let x):
-            return maxNumber - x
-        default:
-            return 0
-        }
-    }
-    
-    var totalPins: Int {
-        return rolls.reduce(0, { $0 + $1.pins })
-    }
-    
-    var hasLeftOver: Bool {
-        return pinsLeft > 0
-    }
-    
     var isComplete: Bool {
-        return ballsLeft == 0 || !hasLeftOver
+        return ballsLeft == 0
     }
     
     init(number: Int) {
@@ -59,50 +36,9 @@ class Frame {
         self.cellScore = "0"
     }
     
-    var previousRoll: Roll? {
-        return rollForBall(atIndex: ballIndex - 1)
-    }
-    
-    func roll(pins: Int) -> Roll {
-        // ⚠️ ATENÇÃO ⚠️ //
-        // Aos 45'do segundo tempo, daqui pra baixo é só xunxo... 😬
-        switch (ballIndex, pins, previousRoll?.type) {
-        case (0, maxNumber, _):
-            rollStrike()
-        case (1, let x, .open(let y)?) where x + y == maxNumber:
-            rollSpare(pins: x)
-        default:
-            rollOpen(pins: pins)
-        }
-        
+    func roll(score: Int) {
+        self.cellScore = String(score)
         ballIndex += 1
-        return rolls.last!
-    }
-    
-    func score(_ score: Int) {
-        self.score = (previousFrame?.score ?? 0) + score
-    }
-    
-    func scoreStrike(pins: Int) {
-        //        score = (previousFrame?.score ?? 0) + 10 + pins
-    }
-    
-    private func rollStrike() {
-        rolls.append(Roll(type: .strike, pins: maxNumber, frame: self))
-    }
-    
-    private func rollSpare(pins: Int) {
-        rolls.append(Roll(type: .spare, pins: pins, frame: self))
-    }
-    
-    private func rollOpen(pins: Int) {
-        rolls.append(Roll(type: .open(pins), pins: pins, frame: self))
-    }
-    
-    private func rollForBall(atIndex index: Int) -> Roll? {
-        guard rolls.indices.contains(index) else { return nil }
-        
-        return rolls[index]
     }
     
 }

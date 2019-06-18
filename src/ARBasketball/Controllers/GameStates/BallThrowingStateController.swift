@@ -47,7 +47,7 @@ class BallThrowingStateController: GameStateController {
     private func waitForBallToFadeOut(ballNode: Ball) {
         var score = 0
         var count = 0
-        Timer.scheduledTimer(withTimeInterval: Constants.Game.ballLifeTime/50, repeats: true) {
+        Timer.scheduledTimer(withTimeInterval: Constants.Game.ballLifeTime/150, repeats: true) {
             timer1 in
             
             var ballVector = ballNode.presentation.worldPosition
@@ -64,11 +64,13 @@ class BallThrowingStateController: GameStateController {
 
             let length: Float = sqrtf(distance.x * distance.x + distance.y * distance.y + distance.z * distance.z)
             print(length)
-            
+            if length < 0.2 {
+                score = 1
+            }
             
             
             count += 1
-            if count==50 {
+            if count==145 {
                 timer1.invalidate()
             }
             
@@ -78,7 +80,7 @@ class BallThrowingStateController: GameStateController {
         
         Timer.scheduledTimer(withTimeInterval: Constants.Game.ballLifeTime, repeats: false) { [weak self] _ in
             guard let this = self else { return }
-            let throwResults = this.game.scoreboard.roll(pins: this.pins)
+            let throwResults = this.game.scoreboard.roll(score: score)
             switch throwResults {
             case .nextBall:
                 this.setUpNextBall()
