@@ -52,8 +52,7 @@ class BallThrowingStateController: GameStateController {
             
             var ballVector = ballNode.presentation.worldPosition
             var rimVector = self.game.hoopPlaceholder.childNode(withName: "backboard", recursively: false)?.childNode(withName: "rim", recursively: false)?.worldPosition
-            
-//            ballVector = ballVector + SCNVector3(0, 0.15, 0)
+        
             rimVector = rimVector! + SCNVector3(0.15, 0.2, 0.15)
             
             print(ballVector)
