@@ -2,20 +2,19 @@
 //  BallThrowingStateController.swift
 //  ARBasketball
 //
-//  Created by Charles Ferreira on 02/03/2018.
-//  Copyright © 2018 Charles Ferreira. All rights reserved.
+//  Created by 佳浩 on 17/06/2019.
+//  Copyright © 2019年 佳浩. All rights reserved.
 //
 
 import SceneKit
 
-class BallThrowingStateController: GameStateController {
+class BallThrowingStateController: GameStateController, SCNPhysicsContactDelegate {
     
     @IBOutlet weak var currentBallLabel: UILabel!
     @IBOutlet weak var currentFrameLabel: UILabel!
     @IBOutlet weak var playerNameLabel: UILabel!
     
     var didThrow = false
-    var pins = 0
     
     func setup() {
         resetHoop()
@@ -46,6 +45,8 @@ class BallThrowingStateController: GameStateController {
     private func waitForBallToFadeOut(ballNode: Ball) {
         var score = 0
         var count = 0
+        
+        //检测球心，150帧率
         Timer.scheduledTimer(withTimeInterval: Constants.Game.ballLifeTime/150, repeats: true) {
             timer1 in
             
@@ -59,10 +60,14 @@ class BallThrowingStateController: GameStateController {
             
             rimVector = rimVector! + SCNVector3(0, 0.2, 0.5)
             print(ballVector, rimVector)
+            
+            //球心与lrim之间距离
             let distance = ballVector-rimVector!
 
             let length: Float = sqrtf(distance.x * distance.x + distance.y * distance.y + distance.z * distance.z)
             print(length)
+            
+            //距离小于0.2视为进球
             if length < 0.2 {
                 score = 1
             }
@@ -75,8 +80,7 @@ class BallThrowingStateController: GameStateController {
             
         }
         
-        
-        
+        //进入下一环节
         Timer.scheduledTimer(withTimeInterval: Constants.Game.ballLifeTime, repeats: false) { [weak self] _ in
             guard let this = self else { return }
             let throwResults = this.game.scoreboard.roll(score: score)
@@ -106,7 +110,6 @@ class BallThrowingStateController: GameStateController {
     private func setUpNextBall() {
         updateHeader()
         didThrow = false
-        pins = 0
     }
     
     private func showScoreboard(gameOver: Bool) {
@@ -120,27 +123,4 @@ class BallThrowingStateController: GameStateController {
         controller.previousState = self
         controller.isGameOver = isGameOver
     }
-}
-
-extension BallThrowingStateController: SCNPhysicsContactDelegate {
-    
-    func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
-        let nodes = [contact.nodeA, contact.nodeB]
-        guard let rim = nodes.first(where:{ $0.name == "rim"}) else {
-            return
-        }
-        print("FUCK#########################################");
-        guard let pinHead = nodes.first(where: { $0.name == Constants.NodeNames.pinHead }) else { return }
-        
-        // animations
-        let delay = SCNAction.wait(duration: Constants.Game.pinLifeTimeAfterKnockDown)
-        let fadeOut = SCNAction.fadeOut(duration: Constants.FX.pinFadeOutDuration)
-        let remove = SCNAction.run { $0.removeFromParentNode() }
-        pinHead.parent?.runAction(SCNAction.sequence([delay, fadeOut, remove]))
-        pinHead.removeFromParentNode()
-        
-        // contabiliza o pino derrubado
-        pins += 1
-    }
-    
 }

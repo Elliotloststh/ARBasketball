@@ -2,8 +2,8 @@
 //  Frame.swift
 //  ARBasketball
 //
-//  Created by Charles Ferreira on 04/03/2018.
-//  Copyright © 2018 Charles Ferreira. All rights reserved.
+//  Created by Jack on 17/06/2019.
+//  Copyright © 2019年 Jack. All rights reserved.
 //
 
 class Frame {
@@ -13,7 +13,7 @@ class Frame {
     let number: Int
     let maxNumber: Int = 10
     
-    var cellScore : String
+    var cellScore : String?
 
     private (set) var ballIndex = 0
 
@@ -33,7 +33,6 @@ class Frame {
     
     init(number: Int) {
         self.number = number
-        self.cellScore = "0"
     }
     
     func roll(score: Int) {

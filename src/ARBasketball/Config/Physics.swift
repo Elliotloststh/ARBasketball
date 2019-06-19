@@ -2,8 +2,8 @@
 //  Physics.swift
 //  ARBasketball
 //
-//  Created by Charles Ferreira on 04/03/2018.
-//  Copyright © 2018 Charles Ferreira. All rights reserved.
+//  Created by Jack on 16/06/2018.
+//  Copyright © 2019年 Jack. All rights reserved.
 //
 
 import Foundation

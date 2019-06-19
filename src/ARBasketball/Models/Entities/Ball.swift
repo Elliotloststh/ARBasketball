@@ -1,3 +1,11 @@
+//
+//  Ball.swift
+//  ARBasketball
+//
+//  Created by 佳浩 on 15/06/2019.
+//  Copyright © 2019年 佳浩. All rights reserved.
+//
+
 import SceneKit
 
 class Ball: SCNNode {

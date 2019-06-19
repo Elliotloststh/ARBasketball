@@ -2,8 +2,8 @@
 //  TitleViewController.swift
 //  ARBasketball
 //
-//  Created by Charles Ferreira on 01/03/2018.
-//  Copyright © 2018 Charles Ferreira. All rights reserved.
+//  Created by 佳浩 on 15/06/2019.
+//  Copyright © 2019年 佳浩. All rights reserved.
 //
 
 import UIKit

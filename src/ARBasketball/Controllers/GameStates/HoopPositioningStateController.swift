@@ -1,9 +1,9 @@
 //
-//  PinsPositioningStateController.swift
+//  HoopPositioningStateController.swift
 //  ARBasketball
 //
-//  Created by Charles Ferreira on 02/03/2018.
-//  Copyright © 2018 Charles Ferreira. All rights reserved.
+//  Created by Jack on 17/06/2019.
+//  Copyright © 2019年 Jack. All rights reserved.
 //
 
 import SceneKit
@@ -35,14 +35,6 @@ class HoopPositioningStateController: GameStateController {
             yOff *= 30
             game.hoopPlaceholder!.simdPosition = game.sceneView.pointOfView!.simdWorldFront + simd_float3(0, 0, -2.0-yOff)
         }
-    }
-    
-    private func createPinsPlaceholder() -> SCNNode {
-        let pins = SCNScene(named: Constants.Models.pins)!.rootNode
-        game.sceneView.scene.rootNode.addChildNode(pins)
-        pins.childNodes.forEach {  $0.opacity = 0.5 }
-        pins.isHidden = true
-        return pins
     }
     
     private func createHoopPlaceholder() -> SCNNode {

@@ -2,8 +2,8 @@
 //  PlayerSelectionViewController.swift
 //  ARBasketball
 //
-//  Created by Charles Ferreira on 02/03/2018.
-//  Copyright © 2018 Charles Ferreira. All rights reserved.
+//  Created by Jack on 16/06/2019.
+//  Copyright © 2019年 佳浩. All rights reserved.
 //
 
 import UIKit
